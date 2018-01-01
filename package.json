@@ -4,8 +4,12 @@
   "description": "Agenda Calendario",
   "main": "public/index.html",
   "scripts": {
+    "start": "node server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Eloy Clemente",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
 }

@@ -19,12 +19,12 @@ const mongoose = require('mongoose')
 
 
 
+var port = process.env.PORT || 3000
 
 
-var port       = process.env.PORT || 3000
 // var database   = process.env.MONGODB_URI || 'mongodb://localhost:27017/database-04'
 
-var database   = 'mongodb://localhost:27017/database-04'
+var database = process.env.MONGODB_URI
 
 //....................................................................
 mongoose.connect(database, (err, res) =>

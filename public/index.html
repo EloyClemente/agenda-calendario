@@ -1,10 +1,175 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<meta name="description" content=""/>
+	<meta name="keywords" content=""/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+	<title>Agenda Calendario</title>
+	
+	<!--imagen .ico para la pestaña del navegador-->
+	<!-- <link rel="shortcut icon" type="image/x-icon" href="#"/>  -->
+	<!--Google Fonts. Siempre antes de la hoja de estilos para que funcione bien-->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"/>
+
+	<!-- <link rel="stylesheet" href="css/styles.css"/> -->
+	<!-- <link rel="stylesheet" href="css/font-awesome.min.css"/> -->
+
+	<script type='text/javascript' src='/socket.io/socket.io.js'></script>
+
 </head>
 <body>
-	<h1>Hola Mundooooo</h1>
+	<div class="container-principal">
+
+
+		<header class="container-header">
+
+
+			<h1 id="logo" class="container-logo">Esencia</h1>
+
+
+			<div class="container-panel-central">
+				<div class="panel-superior"></div>
+				<div class="panel-inferior">
+					<div class="container-zoom">
+						<i id="zoom_menos" class="fa fa-search-minus" aria-hidden="true"></i>
+						<i id="zoom_mas" class="fa fa-search-plus" aria-hidden="true"></i>
+						<p id="restaurar_zoom" class="restaurar-zoom">100%</p>
+					</div>
+					<div class="container-vistas">
+						<i class="fa fa-th" aria-hidden="true"></i>
+						<p id="boton_ver_ocultar" class="boton-ver-ocultar">Ocultar</p>
+						<p id="boton_expandir_contraer" class="boton-expandir-contraer">Expandir</p>
+					</div>
+
+					<!-- ALARMA....................................... -->
+					<div class="container-alarm">
+
+						<div id="alarm_icon"></div> <!-- Icono -->
+						<p id="alarm_button" class="alarm-button"> Alarma </p> <!-- Texto -->
+
+						<div id="alarm_panel" class="alarm-panel">
+
+							<div id="alarm_panel_bloque_1" class="alarm-panel-bloque-1"> <!-- Bloque 1 -->
+								<div class="alarm-panel-box-1"> <!-- Box 1 -->
+									<input type="text" id="alarm_input_hora" class="alarm-inputs">
+									<p>:</p>
+									<input type="text" id="alarm_input_minutos" class="alarm-inputs">
+								</div>
+
+								<input type="button" id="alarm_button_save" class="alarm-button-save" value="Guardar"> 
+							</div>
+
+
+							<!-- <div class="alarm-panel-bloque-2">
+								<p>L</p>
+								<p>M</p>
+								<p>X</p>
+								<p>J</p>
+								<p>V</p>
+								<p>S</p>
+								<p>D</p>
+							</div> -->
+
+
+							<div id="alarm_panel_bloque_3" class="alarm-panel-bloque-3"></div>
+						
+						</div>
+						
+						<!-- AUDIO -->
+						<audio id="alarma" src="sound/alarm.mp3"></audio>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="container-reloj-fecha">
+				<time id="container_fecha" class="container-fecha"></time>
+				<time id="container_reloj" class="container-reloj"></time>
+			</div>
+
+		</header>
+
+
+
+
+
+		<!-- CALENDARIO -->
+		 <div id="container_calendario" class="container-calendario horizontal"> </div>
+
+
+
+
+
+		<!-- AGENDA DIARIA -->
+		 <div id="container_agenda_dia" class="container-agenda-dia">          	
+			
+			<!-- FORMULARIO -->
+			<form id="form" class="form-post">
+				<input type="hidden" id="hidden_post_fecha" name="fecha" value="">
+				<input type="text"   id="input_post_hora"   class="input-post-hora"   name="hora"   autocomplete="off">
+				<input type="text"   id="input_post_evento" class="input-post-evento" name="evento" autocomplete="off">
+				<input type="submit" id="input_post_submit" class="input-post-submit" value="Confirmar">
+			</form>
+			
+			<!-- CABECERA ENTRADAS -->
+			<div id="cabecera_agenda" class="cabecera-agenda">
+				<div id="titulo_hora" class="titulo-hora">Hora</div>
+				<div id="fecha_de_eventos" class="fecha-eventos-dia">Eventos para hoy</div>
+				<p id="mostrar_todos" class="mostrar-todos">Mostrar todos</p>
+			</div>
+			
+			<!-- CONTAINER ENTRADAS -->
+			<div id="container_entradas" class="container-entradas"></div>
+		 </div>
+
+
+
+
+
+
+		<!-- AGENDA SEMANAL -->
+		 <div id="container_agenda_semana"  class="container-agenda-semana">
+		 	<div id="cabecera_semanal" class="cabecera-semanal">
+		 		<div id="titulo_semanal" class="titulo-semanal">Agenda semanal</div>
+		 	</div>
+		 	<br>
+		 </div>
+
+
+
+		 
+
+		 
+
+
+	</div> <!-- CONTAINER PRINCIPAL -->
+	
+
+
+
+<!--
+	<script src="js/01-create-containers.js"></script>
+	<script src="js/02-module-time.js"></script>
+	<script src="js/02-timer.js"></script>
+	<script src="js/03-numbers.js"></script>
+	<script src="js/04-clock-date.js"></script>
+	<script src="js/set-url.js"></script>
+
+	<script src="js/vistas.js"></script> 	
+
+	<script src="js/get-dates.js"></script>	
+	<script src="js/render.js"></script> 		
+	<script src="js/client.js"></script> 	
+	<script src="js/delete-buttons-action.js"></script>
+	<script src="js/alarm.js"></script>
+	<script src="js/scroll-calendar.js"></script>
+	<script src="js/today-color.js"></script> -->
+
+	
+
+
+
 </body>
 </html>

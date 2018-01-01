@@ -22,15 +22,22 @@ const mongoose = require('mongoose')
 
 
 var port = process.env.PORT || 3000
-//var url  = process.env.MONGODB_URI || 
+// var url  = process.env.MONGODB_URI || 'mongodb://localhost:27017/database-04'
 
 //....................................................................
-mongoose.connect('mongodb://localhost:27017/database-04', (err, res) =>
-{
-	if (err) throw err
-	console.log('')
-	console.log('- Conectado a mongo')
+// mongoose.connect(, (err, res) =>
+// {
+// 	if (err) throw err
+// 	console.log('')
+// 	console.log('- Conectado a mongo')
 
-	server.listen(port, () => {console.log('- Ejecutando en 3000')})
-})
+
+	//server.listen(port, () => {console.log('- Ejecutando en 3000')})
+
+	app.listen(port, () => {console.log('- Ejecutando en 3000')})
+
+
+	
+
+// })
 //....................................................................

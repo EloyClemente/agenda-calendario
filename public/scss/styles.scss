@@ -1,0 +1,60 @@
+
+@mixin red    { border: 1px solid red;}
+@mixin blue   { border: 1px solid blue;}
+@mixin gray   { border: 1px solid gray;}
+@mixin green  { border: 1px solid green;}
+@mixin orange { border: 1px solid orange;}
+
+@mixin flex{
+display: flex;
+justify-content: center;
+align-items: center;}
+
+$color-borde: #dcdcdc; // Gainsboro
+$rejilla-dias: #fafafa;
+$color-texto: #009688;
+$height-cabeceras-agenda: 50px;
+$fondoBody: #fafafa;
+$font-size-panel: 13px;
+
+@import "01-reset";
+@import "02-panel-superior";
+@import "03-alarm";
+@import "04-calendario";
+@import "05-agenda-diaria";
+@import "06-agenda-semanal";
+
+
+
+*{
+	// outline: 1px solid #e0e0e0;
+}
+
+
+body{
+	  background-color: $fondoBody;
+}
+
+
+.container-principal{
+	@include flex;
+	flex-wrap: wrap;
+	width: 100%;
+	max-width: 1800px;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,218 @@
+
+
+
+.container-agenda-dia,
+.container-agenda-semana{
+	height: 100%;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-top: 1px solid $color-borde;
+}
+
+.container-agenda-dia{
+	width: 60%;
+}
+
+.container-agenda-semana{
+	width: 40%;
+	border-left: 1px solid $color-borde;
+}
+
+
+
+
+
+
+
+// FORMULARIO
+//............
+.form-post{
+	@include flex;
+	height: 30px;
+	margin-top: 20px;
+}
+
+.input-post-hora{
+	width: 80px;
+	height: 30px;
+	&:focus{
+		background-color: #fcffe6;
+	}
+}
+
+.input-post-evento{
+	width: 100%;
+	height: 30px;
+	&:focus{
+		background-color: #fcffe6;
+	}
+}
+
+.input-post-submit{
+	width: 60px;
+	height: 30px;
+}
+
+
+
+		
+
+
+
+.cabecera-agenda{
+	@include flex;
+	width: 100%;
+	height: 50px;
+	border-bottom: 1px solid $color-borde;
+}
+
+
+.titulo-hora{
+	@include flex;
+	min-width: 80px;
+	height: 40px;
+	align-items: flex-end;
+}
+
+
+.titulo-evento{
+	@extend .titulo-hora;
+	justify-content: flex-end;
+	min-width: 90px;
+	height: 40px;
+}
+
+
+.fecha-eventos-dia{
+	@extend .titulo-hora;
+	justify-content: flex-start;
+	width: 100%;
+	height: 40px;
+	padding-left: 20px;
+}
+
+
+.titulo-hora,
+.fecha-evento,
+.fecha-eventos-dia{
+	color: #009688;
+	font-weight: bold;
+}
+
+.mostrar-todos{
+	width: 180px;
+	padding: 5px;
+	text-align: center;
+	cursor: pointer;
+}
+
+//-
+
+
+.container-entradas{
+	height: 100vh;
+}
+
+
+.capa-entradas{
+	@include flex;
+	justify-content: space-between;
+	height: 40px;
+	border-top: 1px solid $color-borde;
+}
+
+
+.capa-hora{
+	width: 80px;
+	text-align: center;
+}
+
+
+.capa-evento{
+	width: 100%;
+	padding-left: 40px;
+	text-align: left;
+	font-size: 12px;
+}
+
+
+.container-botones{
+	@include flex;
+	justify-content: space-between;
+	width: 130px;
+}
+
+
+.boton-update{
+	font-size: 12px;
+	cursor: pointer;
+}
+
+
+.update-buttons,
+.delete-buttons{
+	color: #333;
+	background-color: #fafafa;
+	font-size: 12px;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	transition: all, .1s;
+	&:hover{
+		transform: scale(1.1, 1.1);
+	}
+	&:active{
+		transform: scale(1, 1);
+	}
+	
+}
+
+.update-buttons{
+	margin-right: 10px;
+	&:hover{
+		color: blue;
+	}
+}
+
+.delete-buttons:hover{
+	color: red;
+}
+
+
+
+
+
+
+
+
+
+.input-time{
+	@include flex;
+	width: 15px;
+	height: 15px;
+	border: none;
+	&:focus{
+		background-color: #c3dcf1;
+		// border: 1px solid $color-borde;
+	}
+}
+
+
+
+
+
+.dos-puntos{
+	@include flex;
+	width: 9px;
+	height: 11px;
+	border: none;
+	// padding-left: 2px;
+	// padding-right: 2px;
+}
+
+
+
+// .container-agenda-dia input{
+// 	border-right: none;
+// }
+

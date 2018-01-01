@@ -1,0 +1,170 @@
+
+
+// ALERTAS
+//.................
+.container-alarm{
+	@include flex;
+	justify-content: space-between;
+	width: 75px;
+	height: 100%;
+	padding-right: 10px;
+	position: relative;
+	font-size: $font-size-panel;
+	// @include red;
+}
+
+
+// Botón de alarma
+//,,,,,,,,,,,,,,,,,,,,
+.alarm-button{
+	cursor: pointer;
+}
+
+// Icono
+//.........
+.alarm-off{
+	cursor: pointer;
+	&::after{
+		font-family: FontAwesome;
+		content: "\f1f7";
+	}
+}
+// Icono
+//........
+.alarm-on{
+	cursor: pointer;
+	&::after{
+		font-family: FontAwesome;
+		content: "\f0a2";
+	}
+}
+// Icono
+//........
+.alarm-blink{
+	cursor: pointer;
+	&::after{
+		font-family: FontAwesome;
+		content: "\f0f3 ";
+	}
+}
+
+
+// Panel de configuración
+//........................
+.alarm-panel{
+	width: 150px;
+	height: 0;
+	position: absolute;
+	top: 103%;
+	left: -50%;
+	background-color: #fff;
+	box-shadow: 0 2px 5px #999;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	overflow: hidden;
+	transition: all, .3s;
+}
+
+.alarm-panel-bloque-1{
+	@include flex;
+	justify-content: space-around;
+	width: 100%;
+	height: 50px;
+}
+
+.alarm-panel-box-1{
+	@include flex;
+}
+
+// Dos puntos
+//.............
+.alarm-panel p{
+	@include flex;
+	width: 10px;
+}
+
+
+
+
+// Inputs
+//............
+.alarm-inputs{
+	width: 20px;
+	height: 20px;
+	padding-left: 4px;
+	border: 0;
+	border-radius: 3px;
+	box-shadow: 0 1px 3px #999 inset;
+	background-color: ivory;
+	font-size: 11px;
+}
+
+// Boton guardar
+//..........................
+.alarm-button-save{
+	width: 70px;
+	height: 20px;
+	font-size: 9px;
+	border: 1px solid gainsboro;
+	border-radius: 3px;
+	background-color: transparent;
+	outline: none;
+	cursor: pointer;
+	transition: all, .3s;
+	&:hover{
+		color: #fff;
+		background-color: royalblue;
+	}
+
+}
+
+
+// Dias de la semana
+//.....................
+// .alarm-panel-bloque-2{
+// 	@include flex;
+// 	width: 100%;
+// 	height: 30px;
+// 	justify-content: space-around;
+// 	font-size: 9px;
+// 	color: #999;
+// }
+
+
+
+
+.alarm-panel-bloque-3{
+	@include flex;
+	flex-wrap: wrap;
+	width: 100%;
+	background-color: #fff;
+}
+
+.alarm-container{
+	@include flex;
+	width: 100%;
+	border-top: 1px solid $color-borde;;
+}
+
+.alarm-settings-hora,
+.alarm-settings-minutos{
+	@include flex;
+	width: 10%;
+	height: 30px;
+	font-size: 13px;
+}
+
+
+.alarm-icon-cross{
+	@include flex;
+	width: 20%;
+	height: 30px;
+	margin-left: 36%;
+	cursor: pointer;
+	transition: all, .3s;
+	&:hover{
+		color: #fff;
+		background-color: pink;
+	}
+}
+

@@ -1,0 +1,138 @@
+
+
+// CONTAINER PARA TODO EL CALENDARIO
+//..................................
+.container-calendario{
+	width: 100%;
+	font-size: 14px;
+	transition: all, .3s;
+	background-color: #F1F1F1;
+}
+.horizontal{
+	// height: 167px;
+	height: 180px;
+	padding-top: 10px;
+	overflow-y: hidden; 
+	white-space: nowrap;
+}
+.expandido{
+	@include flex;
+	align-content: flex-start;
+	flex-wrap: wrap;
+}
+
+
+
+
+
+
+// CONTAINER PARA CADA MES
+//.........................
+.container-mes{
+	@include flex;
+	align-content: flex-end;
+	width: 130px;
+	height: 130px;
+	margin: 10px;
+	box-shadow: 0 1px 5px #b0b0b0;
+	border-radius: 3px;
+	overflow: hidden;
+}
+.container-mes-contraer{
+	display: inline-flex;
+	flex-wrap: wrap;
+}
+.container-mes-vista-cal{
+	@include flex;
+	align-content: flex-start;
+	flex-wrap: wrap;
+}
+
+
+
+
+
+
+
+// CONTAINER PARA EL NOMBRE DEL MES
+// Y LOS DÍAS DE LA SEMANA
+//.......................
+.container-titulo-letras{
+	@include flex;
+	flex-wrap: wrap;
+	width: 100%;
+	height: 20%;
+}
+// Nombres de los meses
+.nombre-mes{
+	@include flex;
+	width: 100%;
+	height: 70%;
+	color: #606060;
+	font-size: 0.8em;
+	background-color: $fondoBody;
+}
+// Días de la semana
+.dias-semana{
+	@include flex;
+	width: 14.28%;
+	height: 30%;
+	font-size: 0.45em;
+	background-color: $fondoBody;
+}
+
+
+
+
+
+// CONTAINER PARA LOS DÍAS
+// Contiene 42 capas 
+// para los días individuales
+//............................
+.container-dias{
+	@include flex;
+	justify-content: flex-end; // Esto es un hack. Quizás no lo necesite
+	flex-wrap: wrap;
+	width: 100%;
+	height: 80%;
+}
+
+
+
+// CAPAS PARA LOS DÍAS
+// Días individuales
+//.....................
+.capa-dia{
+	@include flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+	width: 14.285714%;
+	height: 16.66%;
+	padding: 1px;
+	font-size: 0.65em;
+	background-color: #fff;
+	cursor: pointer;
+	transition: none;
+	background-color: $fondoBody;
+}
+
+
+// .container-dias .capa-dia:nth-child(7n+7)
+// {
+// 	// border-right: 1px solid $rejilla-dias;
+// }
+
+
+// // Selecciona un rango de elementos
+// .container-dias .capa-dia:nth-child(n+36):nth-child(-n+42)
+// {
+// 	// border-bottom: 1px solid $color-borde;
+// }
+
+
+.numeros{
+	@include flex;
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 50%;
+}

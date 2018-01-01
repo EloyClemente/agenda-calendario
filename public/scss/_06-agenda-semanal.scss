@@ -1,0 +1,16 @@
+
+.cabecera-semanal{
+	@include flex;
+	width: 100%;
+	height: $height-cabeceras-agenda;
+	padding-bottom: 10px;
+}
+
+
+.titulo-semanal{
+	@include flex;
+	width: 120px;
+	height: $height-cabeceras-agenda;
+	align-items: flex-end;
+
+}

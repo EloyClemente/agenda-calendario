@@ -22,7 +22,8 @@ function scrollCalendar()
 
 	// Localizamos su posición
 	//...................................................
-	let posicionScroll = hoy.getBoundingClientRect().left - (viewport / 2)
+	// let posicionScroll = hoy.getBoundingClientRect().left - (viewport / 2)
+	let posicionScroll = hoy.getBoundingClientRect().left
 
 
 	// Movemos el scroll a la posición del día de hoy
@@ -32,7 +33,7 @@ function scrollCalendar()
 
 
 }
-scrollCalendar()
+// scrollCalendar()
 
 
 

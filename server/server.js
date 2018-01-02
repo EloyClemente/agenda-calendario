@@ -223,8 +223,6 @@ io.on('connection', (socket) =>
 
 
 
-
-
 }) // io.on('connection')
 
 
@@ -237,12 +235,8 @@ io.on('connection', (socket) =>
 
 
 
-
-
-
-
-// var database_local = 'mongodb://localhost:27017/database-04'
-// var port_local = 3000
+// var port = 3000
+// var database = 'mongodb://localhost:27017/database-04'
 
 var port     = process.env.PORT
 var database = process.env.MONGODB_URI

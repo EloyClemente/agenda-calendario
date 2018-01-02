@@ -10,6 +10,7 @@ var alarm_input_hora = document.getElementById('alarm_input_hora')
 // ENLAZA CON INDEX.HTML
 
 var socket = io.connect('https://agenda-calendario.herokuapp.com', { 'forceNew': true })
+// var socket = io.connect('http://localhost:3000', { 'forceNew': true })
 
 
 // Recibe los eventos

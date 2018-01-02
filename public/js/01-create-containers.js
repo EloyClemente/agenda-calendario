@@ -34,7 +34,7 @@ crear_calendario()
 //............................
 function capas_meses() 
 {
-	for(let i=1; i <= 25; i++)
+	for(let i=1; i <= 12; i++)
 	{
 		let capa_mes = document.createElement('div')
 
@@ -56,7 +56,7 @@ function capas_meses()
 //..............................................
 function container_cabecera()
 {
-	for(let i=1; i <= 25; i++)
+	for(let i=1; i <= 12; i++)
 	{
 		let container_titulo_letras = document.createElement('div')
 
@@ -75,7 +75,7 @@ function container_cabecera()
 //.................................
 function container_dias()
 {
-	for(let i=1; i <= 25; i++)
+	for(let i=1; i <= 12; i++)
 	{
 		let container_capas_dias = document.createElement('div')
 
@@ -102,7 +102,7 @@ function nombre_mes()
 	var lista_meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
 
 
-	for(let i=1; i <= 25; i++)
+	for(let i=1; i <= 12; i++)
 	{
 		//...............................................
 		let capa_nombre_mes = document.createElement('p')
@@ -137,7 +137,7 @@ function dias_semana()
 	let dias_semana = ["L", "M", "X", "J", "V", "S", "D"]
 
 
-	for(var i=0; i < 25; i++)
+	for(var i=0; i < 12; i++)
 	{
 		for(let x=0; x <= 6; x++)
 		{
@@ -164,7 +164,7 @@ function capas_dias()
 	var container_dias = document.getElementsByClassName('container-dias')
 
 
-	for(var i=0; i < 25; i++)
+	for(var i=0; i < 12; i++)
 	{
 		for(let x=1; x <= 42; x++)
 		{

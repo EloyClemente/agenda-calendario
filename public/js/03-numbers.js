@@ -13,9 +13,9 @@ function load_calendar()
 {
 	var cont_dias = 1
 
-	for(var i=1; i < 762; i++)
+	for(var i=1; i < 366; i++)
 	{
-		var primero = new Date(Tiempo.year(), Tiempo.month() - 12)
+		var primero = new Date(Tiempo.year(), Tiempo.month())
 		var segundo = new Date(primero.setDate(cont_dias))
 
 
